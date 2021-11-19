@@ -1,0 +1,61 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Candidate Table</h4>
+                      <p class="card-category"> list of candidates active</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+
+                             <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Name
+                                  </th>
+                                  <th>
+                                      Email
+                                  </th>
+                                  <th>
+                                      Action
+                                  </th>
+                              </thead>
+                            <tbody>
+                              <tr *ngFor="let user of users">
+                                  <td>
+                                      {{user.id}}
+                                  </td>
+                                  <td>
+                                      {{user.full_name}}
+                                  </td>
+                                  <td>
+                                      {{user.email}}
+                                  </td>
+                                  <td>
+                                      <a class="btn btn-danger btn-round" [routerLink]="['/candidate/view/', user.id]"><span class="material-icons">
+                                        <i class="material-icons">visibility</i>
+                                      </span></a>
+                                      <a class="btn btn-danger btn-round" [routerLink]="['/candidate', user.id]"><span class="material-icons">
+                                        <i class="material-icons">edit_note</i>
+                                      </span></a>
+                                      <a class="btn btn-danger btn-round" href="#/candidates"><span class="btn btn-danger btn-round" class="material-icons" (click)="deleteResource(user.id)">
+                                        <i class="material-icons">delete</i>
+                                      </span></a>
+                                  </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                             
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>

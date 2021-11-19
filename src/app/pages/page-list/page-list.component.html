@@ -1,0 +1,61 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Page Table
+                        <a class="btn btn-danger btn-round pull-right" [routerLink]="['/page/']">
+                          <span class="material-icons">
+                            <i class="material-icons">add</i>
+                          </span>
+                        </a>
+                      </h4>
+                      <p class="card-category"> list of Pages active</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+
+                             <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Title
+                                  </th>
+                                  <th>
+                                      Action
+                                  </th>
+                              </thead>
+                            <tbody>
+                              <tr *ngFor="let page of pages">
+                                  <td>
+                                      {{page.id}}
+                                  </td>
+                                  <td>
+                                      {{page.title}}
+                                  </td>
+                                  <td>
+                                      <a class="btn btn-danger btn-round" [routerLink]="['/page/view/', page.id]"><span class="material-icons">
+                                        <i class="material-icons">visibility</i>
+                                      </span></a>
+                                      <a class="btn btn-danger btn-round" [routerLink]="['/page', page.id]"><span class="material-icons">
+                                        <i class="material-icons">edit_note</i>
+                                      </span></a>
+                                      <a class="btn btn-danger btn-round" href="#/pages"><span class="btn btn-danger btn-round" class="material-icons" (click)="deleteResource(page.id)">
+                                        <i class="material-icons">delete</i>
+                                      </span></a>
+                                  </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                             
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="wrapper" style="background: gray;">
+    
+    <div class="main-content">
+      <div class="container-fluid" style="background: gray;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                </div>
+            </div>
+        </div>
+
+          <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                </div>
+            </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-header card-header-danger">
+                          <h4 class="card-title">Login</h4>
+                          <p class="card-category">Authentication</p>
+                      </div>
+                      <div class="card-body">
+                          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                              <div class="row">
+                                  <div class="col-md-8">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Username/Email" formControlName="email" type="email">
+                                      </mat-form-field>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Password" formControlName="password" type="Password">
+                                    </mat-form-field>
+                                  </div>
+                              </div>
+                              <a class="float-left" href="#">forgot password</a>
+                              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Login</button>
+                              <div class="clearfix"></div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+               <div class="col-md-4">
+                <div class="card">
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+
